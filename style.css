@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+  }
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    --rich-black: hsla(225, 50%, 9%, 0.7);
+    --gainsboro: hsla(220, 1%, 98%, 1);
+    --silver: hsla(32, 9%, 68%, 0.5);
+    --space: hsla(228, 63%, 40%, 1);
+       
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--gainsboro);
+}
+
+body >* {
+    flex: 1 100%;
+}
+
+#brand {
+    font-size: 60px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gainsboro);
+}
+
+@media all and (max-width: 560px) {
+    header {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    #brand {
+        font-size: 12vw;
+    }
+}
+
+@media all and (max-width: 260px) {
+    #header-img {
+        display: none;
+    }
+    #nav-bar {
+        text-align: center;
+    }
+}
+
+main {
+    margin: 12vh auto 6vh auto;
+    text-align: center;
+    width: 80%;
+}
+
+
+#logo {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 1vw;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+form {
+    padding-top: 2vh;
+}
+
+#pricing {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.price {
+    border: 1px solid black;
+    margin: 10px;
+    width: calc(100% / 3), min-content;
+    flex: 1 0;
+}
+
+.price > #label {
+    text-transform: uppercase;
+    background-color: var(--silver);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
